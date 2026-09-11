@@ -10,7 +10,31 @@ const ACTIVITIES=[
 ];
 const seedNames=['Dexter','Jack','Melita','Scarlett','Jayden','Ani','Katie','Braxton','Kaylen','Bethany','Isaac','Lucy','Blake','Max','Lara','Luiza','Brooklyn','Josh','Jaxon','Brooke','Emily','Thomas','Edie','Daisy','Bodi','April','Clark','Iacob','Ruben'];
 let classes=read('cp_classes',[{name:'P7SC',pupils:seedNames,tools:Object.fromEntries(ACTIVITIES.map(a=>[a.id,true]))}]);
-let records=read('cp_records',[]),classIndex=0,currentActivity=null,currentPupil='',selectedScore=null,portalFilter='All';
+// Ensure all activities exist for older saved classes
+
+classes.forEach(c => {
+
+    if(!c.tools){
+        c.tools = {};
+    }
+
+    ACTIVITIES.forEach(a => {
+
+        if(c.tools[a.id] === undefined){
+            c.tools[a.id] = true;
+        }
+
+    });
+
+});
+
+// Force Weekly Roundup on
+
+classes.forEach(c => {
+    c.tools.weekly = true;
+});
+
+save('cp_classes', classes);let records=read('cp_records',[]),classIndex=0,currentActivity=null,currentPupil='',selectedScore=null,portalFilter='All';
 const $=id=>document.getElementById(id), save=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
 function read(k,f){try{return JSON.parse(localStorage.getItem(k))??f}catch{return f}}
 function show(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('hidden',v.id!==id));$('nav').classList.toggle('hidden',id==='login');scrollTo(0,0)}
