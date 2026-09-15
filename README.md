@@ -1,6 +1,9 @@
-# Stat Buddy v9 Clean Core
-This replacement build provides a clean, tested event-binding path for Save result and Create a tool. It also includes the class saved confirmation and filtered CSV export.
+# Stat Buddy v10 - working core
 
-Upload `index.html`, `styles.css`, and `app.js` to GitHub. Demo: teacher / demo123.
+This build repairs application startup and binds every main button through one guarded startup function. It also carries group-specific maxima into saved scores, migrates older saved classes, and displays a visible error panel if a browser runtime error occurs.
+
+Replace index.html, styles.css and app.js in GitHub. Hard-refresh after deployment.
+
+Demo: teacher / demo123.
 
 Important: browser localStorage only. Do not use real pupil or wellbeing data until secure authentication and cloud storage are implemented.
