@@ -1,9 +1,9 @@
-# Stat Buddy v10 - working core
+# Stat Buddy v8
 
-This build repairs application startup and binds every main button through one guarded startup function. It also carries group-specific maxima into saved scores, migrates older saved classes, and displays a visible error panel if a browser runtime error occurs.
+Fixes the Create a tool workflow. Selecting Create a tool opens the template picker. Selecting a template creates an independent custom tool, saves it to the current class, returns to Manage, and opens its setup editor.
 
-Replace index.html, styles.css and app.js in GitHub. Hard-refresh after deployment.
+This build retains the two-second class Saved message and filtered CSV export options.
 
-Demo: teacher / demo123.
+Upload index.html, styles.css and app.js to GitHub. Demo: teacher / demo123.
 
 Important: browser localStorage only. Do not use real pupil or wellbeing data until secure authentication and cloud storage are implemented.
