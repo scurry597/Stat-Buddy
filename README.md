@@ -1,20 +1,27 @@
-# Class Pulse
+# Stat Buddy
 
-A GitHub Pages-ready classroom tracking prototype.
+Stat Buddy is a GitHub Pages-ready classroom tracking prototype. It includes five built-in templates and lets teachers create new tools by copying a template.
 
-## Publish with GitHub Pages
+## Files
 
-1. Create a GitHub repository.
-2. Upload `index.html`, `styles.css`, and `app.js` to the repository root.
+- `index.html` - page structure
+- `styles.css` - visual design
+- `app.js` - application logic
+
+## Publish on GitHub Pages
+
+1. Create a repository.
+2. Upload the three files to the repository root.
 3. Open **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**.
-5. Choose the `main` branch and `/ (root)`, then save.
+4. Select **Deploy from a branch**.
+5. Select `main` and `/ (root)`.
+6. Save.
 
 ## Demo login
 
 - Username: `teacher`
 - Password: `demo123`
 
-## Important limitation
+## Important
 
-This prototype uses browser `localStorage`. Data does not sync between devices or users, and the demo credentials are visible in `app.js`. Do not use real pupil or wellbeing data until authentication, secure cloud storage, access controls, retention rules, backups, and an appropriate data-protection review are implemented.
+This prototype stores data in `localStorage`. It is not suitable for real pupil or wellbeing data until secure authentication, cloud storage, access controls, backups, retention rules, and a data-protection review are added.
