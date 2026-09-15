@@ -7,3 +7,4 @@ This build retains the two-second class Saved message and filtered CSV export op
 Upload index.html, styles.css and app.js to GitHub. Demo: teacher / demo123.
 
 Important: browser localStorage only. Do not use real pupil or wellbeing data until secure authentication and cloud storage are implemented.
+.
