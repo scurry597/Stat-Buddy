@@ -1,9 +1,9 @@
-# Stat Buddy v8
+# Stat Buddy Working Widgets + Learning Intention Subjects
 
-Fixes the Create a tool workflow. Selecting Create a tool opens the template picker. Selecting a template creates an independent custom tool, saves it to the current class, returns to Manage, and opens its setup editor.
+All six built-in widgets now save records and grey completed pupils: Wellbeing Check, Score Tracker, Homework Hand In, Guided Reading, Individual Pupil Record, and Learning Intention Tracker.
 
-This build retains the two-second class Saved message and filtered CSV export options.
+Learning Intention Tracker now asks for a subject and Learning Intention when opened. Subjects are editable in Manage. Individual pupil Learning Intention overrides remain available.
 
-Upload index.html, styles.css and app.js to GitHub. Demo: teacher / demo123.
+Synthetic data only: Reading Group Africa and fictional pupil names.
 
-Important: browser localStorage only. Do not use real pupil or wellbeing data until secure authentication and cloud storage are implemented.
+Upload index.html, styles.css and app.js to GitHub. Prototype login: teacher / demo123.
