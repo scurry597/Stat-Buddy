@@ -7,4 +7,128 @@
 <section id="manage" class="page hidden"><div class="card"><button data-page="classes">← Back</button><h2>Manage</h2><label>Class<select id="manageClass"></select></label><label>Class name<input id="className"></label><label>Class list<textarea id="classList" rows="8"></textarea></label><button id="saveClass" class="primary">Save class</button><span id="saved" class="hidden"> ✓ Saved</span><div class="spread"><h3>Widgets</h3><button id="createTool" class="primary">＋ Create a tool</button></div><div id="manageTools" class="tiles"></div><div id="editor"></div></div></section>
 <section id="portal" class="page hidden"><div class="card"><button data-page="tools">← Back</button><h2>Teacher Portal</h2><label>Class<select id="portalClass"></select></label><label>Day<select id="portalDay"></select></label><div id="portalTabs" class="tabs"></div><div id="summary" class="tiles"></div><div class="table-wrap"><table><thead><tr><th>Pupil</th><th>Widget</th><th>Details</th></tr></thead><tbody id="rows"></tbody></table></div></div></section></main>
 <div id="entryModal" class="modal hidden"><div class="card modal-card wide"><button class="close">← Back</button><h2 id="entryTitle"></h2><div id="entryBody"></div><button id="saveEntry" class="primary">Save result</button></div></div>
-<div id="templateModal" class="modal hidden"><div class="card modal-card"><button class="close">← Close</button><h2>Copy a built-in widget</h2><div id="templateTiles" class="tiles"></div></div></div><script src="app.js" defer></script></body></html>
+<div id="templateModal" class="modal hidden"><div class="card modal-card"><button class="close">← Close</button><h2>Copy a built-in widget</h2><div id="templateTiles" class="tiles"></div></div></div>
+  <div id="dragFeedbackModal" class="modal hidden">
+    <div class="card modal-card">
+        <button
+            id="cancelDragFeedback"
+            type="button"
+            class="close"
+        >
+            ← Cancel
+        </button>
+
+        <h2 id="dragFeedbackTitle">
+            Pupil feedback
+        </h2>
+
+        <p id="dragFeedbackQuestion">
+            How did you find this task?
+        </p>
+
+        <div
+            id="dragFeedbackOptions"
+            class="drag-feedback-options"
+        ></div>
+
+        <label>
+            Optional comment
+
+            <textarea
+                id="dragFeedbackComment"
+                rows="3"
+                placeholder="Add a comment if needed"
+            ></textarea>
+        </label>
+
+        <button
+            id="saveDragFeedback"
+            type="button"
+            class="primary"
+        >
+            Save feedback
+        </button>
+    </div>
+</div>
+
+<div id="dragDropEditorModal" class="modal hidden">
+    <div class="card modal-card wide">
+        <button
+            id="closeDragDropEditor"
+            type="button"
+            class="close"
+        >
+            ← Close
+        </button>
+
+        <h2>Edit Drag & Drop</h2>
+
+        <label>
+            Tool name
+
+            <input
+                id="dragToolName"
+                value="Drag & Drop"
+            >
+        </label>
+
+        <label class="drag-feedback-toggle">
+            <input
+                id="dragFeedbackEnabled"
+                type="checkbox"
+            >
+
+            Ask pupils for feedback when dropped
+        </label>
+
+        <div id="dragFeedbackEditorSettings">
+            <label>
+                Feedback question
+
+                <input
+                    id="dragFeedbackPromptInput"
+                    value="How did you find this task?"
+                >
+            </label>
+
+            <h3>Feedback choices</h3>
+
+            <div id="dragFeedbackEditor"></div>
+
+            <button
+                id="addDragFeedback"
+                type="button"
+                class="secondary"
+            >
+                ＋ Add feedback choice
+            </button>
+        </div>
+
+        <div class="spread">
+            <h3>Sections</h3>
+
+            <button
+                id="addDragSection"
+                type="button"
+                class="primary"
+            >
+                ＋ Add section
+            </button>
+        </div>
+
+        <p>
+            Add, remove, rename and recolour the sections.
+        </p>
+
+        <div id="dragSectionEditor"></div>
+
+        <button
+            id="saveDragToolSettings"
+            type="button"
+            class="primary"
+        >
+            Save Drag & Drop tool
+        </button>
+    </div>
+</div>
+  <script src="app.js" defer></script></body></html>
