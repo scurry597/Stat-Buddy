@@ -862,17 +862,24 @@ async function checkMicrosoftLogin() {
         const data = await response.json();
 
         if (data.clientPrincipal) {
+
             sessionStorage.sbli = '1';
+
+            document.getElementById('login')
+                ?.classList.add('hidden');
+
             renderClasses();
+
+            return;
         }
+
+        show('login');
+
     } catch (error) {
-        console.error(
-            'Unable to check Microsoft login:',
-            error
-        );
+        console.error(error);
+        show('login');
     }
 }
-
 checkMicrosoftLogin();
 
 $('logout').onclick = () => {
