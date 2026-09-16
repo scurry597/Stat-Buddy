@@ -857,28 +857,41 @@ document.addEventListener('change', e => {
 });
 
 async function checkMicrosoftLogin() {
+
     try {
-        const response = await fetch('/.auth/me');
-        const data = await response.json();
 
-        if (data.clientPrincipal) {
+        const response =
+            await fetch('/.auth/me');
 
-            sessionStorage.sbli = '1';
+        const data =
+            await response.json();
 
-            document.getElementById('login')
-                ?.classList.add('hidden');
+        if (
+            data &&
+            data.clientPrincipal
+        ) {
 
             renderClasses();
 
             return;
+
         }
 
         show('login');
 
-    } catch (error) {
-        console.error(error);
-        show('login');
     }
+
+    catch (error) {
+
+        console.error(
+            'Microsoft login check failed',
+            error
+        );
+
+        show('login');
+
+    }
+
 }
 checkMicrosoftLogin();
 
@@ -956,3 +969,16 @@ if (sessionStorage.sbli) {
     renderClasses();
 }
 });
+const loginButton =
+    document.getElementById('microsoftLogin');
+
+if (loginButton) {
+
+    loginButton.onclick = () => {
+
+        window.location.href =
+            '/.auth/login/aad';
+
+    };
+
+}
