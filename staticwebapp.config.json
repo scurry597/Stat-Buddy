@@ -1,23 +1,25 @@
 {
-  "navigationFallback*: {
+  "navigationFallback": {
     "rewrite": "/index.html"
- *},
+  },
   "routes": [
     {
-      "*oute": "/*",
-      "allowedRoles":*["authenticated"]
+      "route": "/*",
+      "allowedRoles": ["authenticated"]
     },
     {
-   *  "route": "/login",
-      "*ewrite": "/.auth/login/aad"
-    },*    {
+      "route": "/login",
+      "rewrite": "/.auth/login/aad"
+    },
+    {
       "route": "/logout",
-  *   "redirect": "/.auth/logout"
-   *}
+      "redirect": "/.auth/logout"
+    }
   ],
   "responseOverrides": {
-  * "401": {
-      "statusCode": 302,*      "redirect": "/.auth/login/aa*"
+    "401": {
+      "statusCode": 302,
+      "redirect": "/.auth/login/aad"
     }
   }
 }
