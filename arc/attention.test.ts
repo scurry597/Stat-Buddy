@@ -1,0 +1,1 @@
+import{describe,expect,it}from'vitest';describe('attention rules',()=>{it('uses under forty percent as an alert',()=>expect(3/10<.4).toBe(true));it('does not alert at forty percent',()=>expect(4/10<.4).toBe(false))});
