@@ -1,1 +1,0 @@
-{"IsEncrypted":false,"Values":{"AzureWebJobsStorage":"UseDevelopmentStorage=true","FUNCTIONS_WORKER_RUNTIME":"node","LOCAL_DEMO":"true","COSMOS_ENDPOINT":"","COSMOS_DATABASE":"stat-buddy","COSMOS_CONTAINER":"records","RETENTION_DAYS":"365","PROTOTYPE_WARNING":"true"}}
