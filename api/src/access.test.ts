@@ -1,0 +1,1 @@
+import{describe,expect,it}from'vitest';import{requireRole}from'./auth.js';describe('access control',()=>{it('rejects users without an application role',()=>expect(()=>requireRole({userId:'x',displayName:'x',roles:['authenticated']})).toThrow());it('accepts a teacher',()=>expect(()=>requireRole({userId:'x',displayName:'x',roles:['Teacher']})).not.toThrow())});
