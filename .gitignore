@@ -1,3 +1,9 @@
 .DS_Store
 Thumbs.db
 .vscode/
+node_modules/
+api/node_modules/
+dist/
+api/dist/
+api/local.settings.json
+.env
